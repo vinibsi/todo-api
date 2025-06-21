@@ -48,10 +48,10 @@ $ go run cmd/main.go
 
 ## Endpoints disponíveis
 ```text
-GET    /api/v1/todos              - Lista todas as tarefas (com paginação)
-GET    /api/v1/todos/:id          - Busca tarefa por ID
-POST   /api/v1/todos              - Cria nova tarefa
-PUT    /api/v1/todos/:id          - Atualiza tarefa
-DELETE /api/v1/todos/:id          - Deleta tarefa
-PATCH  /api/v1/todos/:id/complete - Marca tarefa como concluída
+GET    /v1/todos              - Lista todas as tarefas (com paginação)
+GET    /v1/todos/:id          - Busca tarefa por ID
+POST   /v1/todos              - Cria nova tarefa
+PUT    /v1/todos/:id          - Atualiza tarefa
+DELETE /v1/todos/:id          - Deleta tarefa
+PATCH  /v1/todos/:id/complete - Marca tarefa como concluída
 ```
