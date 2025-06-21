@@ -1,0 +1,20 @@
+services:
+
+  postgres:
+    image: 'postgres:16-bullseye'
+    ports:
+      - '5433:5432'
+    command:
+      - "postgres"
+      - "-c"
+      - "wal_level=logical"
+    environment:
+      - 'POSTGRES_USER=user'
+      - 'POSTGRES_PASSWORD=password'
+      - 'POSTGRES_DB=todo_db'
+      - 'POSTGRES_HOST_AUTH_METHOD=trust'
+    healthcheck:
+      timeout: 5s
+      retries: 120
+      interval: 30s
+      test: "pg_isready -U postgres -d todo_db"

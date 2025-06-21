@@ -11,7 +11,7 @@ type Config struct {
 func Load() *Config {
 	return &Config{
 		Port:        getEnv("PORT", "8080"),
-		DatabaseUrl: getEnv("DATABASE_URL", "postgres://user:password@localhost/todoapp?sslmode=disable"),
+		DatabaseUrl: getEnv("DATABASE_URL", "postgres://user:password@localhost:5433/todo_db?sslmode=disable"),
 		Environment: getEnv("ENVIRONMENT", "development"),
 	}
 }
